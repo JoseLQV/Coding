@@ -1,3 +1,5 @@
+#---------- ARRAY -------------
+
 # [] for the use of arrays
 # empty array = []
 
@@ -12,7 +14,7 @@ length = len(numbers)
 matrix = [numbers,words]
 
 
-# Traverse Array
+# --------------Traverse Array-------------------
 
 # # For loops:
 # for number in numbers:
@@ -24,6 +26,15 @@ matrix = [numbers,words]
 #     print(numbers[index])
 #     index += 1
 
+
+#----------- Dynamic Array ---------------
+# Dynamic Array
+num = []
+num.append("33")
+num.append("24")
+num.append(22)
+num.remove("24")
+# print(num)
 
 
 
