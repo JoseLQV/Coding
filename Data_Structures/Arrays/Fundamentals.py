@@ -37,4 +37,12 @@ num.remove("24")
 # print(num)
 
 
+# ------------- 2D -----------------
+matrix = []
+matrix.append(["Testing", "Something"])
+matrix.append('extra')
+matrix.append(["Testing2", "Trouble"])
+print(matrix[0][1])
+
+
 

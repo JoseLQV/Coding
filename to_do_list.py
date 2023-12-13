@@ -1,12 +1,11 @@
 # To do list:
 
 # Arrays
-#     Sorting arrays
-#     Adding
-#     Removing
-#     Indexing
-#     Dynamic array
-#     2D Array 
+#     Adding                (Completed)
+#     Removing              (Completed)
+#     Indexing              (Completed)
+#     Dynamic array         (Completed)
+#     2D Array              (Completed)
 
 # Hashmaps/Dictionaries
 #     Adding , Removing
@@ -32,12 +31,17 @@
 #     Quick
 #     Selection
 
-
-
 # Binary Tree
 #     Pre-Order
 #     In-Order
 #     Post-Order
+
+# Terminal
+#     Git Clone, Push, Pull
+#     Git Merge
+    
+
+    
 
 
 
