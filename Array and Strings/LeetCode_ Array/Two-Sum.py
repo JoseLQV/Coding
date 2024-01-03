@@ -65,24 +65,24 @@
    #Traverse through array
    
    
-def solution(nums,target):
+def solution(nums,target): #O(n)
     #Check 
     if target == None or nums == None:
         return []
     
-    
-    map = {}
+                #key -> val
+    map = {} # number : index 
     #Traverse
     for index, number in enumerate(nums):
         diff = abs(target - number)
         
         # Found it
-        if diff in map == True: 
+        if diff in map: 
             return [map[diff], index]
         
         #Not Found
         else:
-            map[index] = number 
+            map[number] = index 
     
     return []
             
