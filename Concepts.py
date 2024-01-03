@@ -30,7 +30,19 @@ class Hashmaps():
     def getVals(map,key): #O(1)
         #This works instantly O(1)
         print(map[key])
-
+        
+    def getFunction(map,key):
+        # to get the boolean use -> key in map
+        
+        #option 1
+        if key in map:
+            print(True)
+        else:
+            print(False)
+            
+        #option 2
+        print(key in map)
+#---------------------
 Hashmap = {
     1:"First",
     2:"Second",
@@ -38,3 +50,7 @@ Hashmap = {
 }
 # Hashmaps.getKeys(Hashmap,"First")
 # Hashmaps.getVals(Hashmap,2)
+Hashmaps.getFunction(Hashmap,3)
+
+
+#--------------------
