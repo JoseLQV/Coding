@@ -27,6 +27,8 @@
  
 
 # Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+
+
 #------------------------------------------------------------------------------------------
 
 # ATTEMPT 2:
@@ -57,12 +59,14 @@
     # Input: nums = [] , target = []
     #  Output: []
 
-# Brute Force:      
-    #Input: nums = [2,7,11,15], target = 9
+# Brute Force:     
+    #Input: nums = [2,3,5,7,8,11,15], target = 13
     # Output: [0,1]
    
    #Check (none)
    #Traverse through array
+    # If target - number found in hash return 
+    # else: add to hash
    
    
 def solution(nums,target): #O(n)
