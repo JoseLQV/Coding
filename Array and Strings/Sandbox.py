@@ -36,4 +36,13 @@ def spaces(str):
             
 # spaces("Hello Wolrd")
 
+def removeSpaces(str):
+    result = []
+    for index , n in enumerate(str):
+        # Probably create a list 
+        if n == ' ':
+            pass
+
+
+removeSpaces("Hello Wolrd")
             
