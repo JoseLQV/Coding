@@ -59,24 +59,19 @@ class Solution(object):
 # Formula?
 # Nested For loops?
 
-    # Queues? 
+#Choices:   
+    #Traverse the list
+    #Remove the one you choosing from the list
+    #permutate (repeat the process)
+#Constraints
+#Goal/BaseCase
+class permutation():
+    def perm(nums):
+        result  = []
+        for n in nums:
+            nums.remove(n)
+            permutation(nums,)
+            
+
     
-# I can probably rotate while mantaining one fixed
 
-
-#                   _      _      _
-                #  _ _    _ _     _ _
-                #_    _   _  _    _  _
-                
-# Recursion:
-# Go through the problem and keep reducing the options
-
-
-def Perm(nums):
-    matrix = {}
-    
-    pass
-def recursion(available_nums, matrix, curr_path):
-    available_nums= []
-    
-    pass
