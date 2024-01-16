@@ -9,6 +9,38 @@
 #Output : True (permutations: "taco cat", "atco cta", ect..)
 # Hints : 106,121,134,136 
 
+
+
+#-----------------------------------------------------------------------------------
+# Attempt 2:
+
+#Description get all permutations that also are palindrome
+# Palindrome (word backwards or fowards)
+# Permutations (rearrange letters)
+
+#Conditions:
+# Given a string
+# Return all permutations that are palindrome and the boolean if found 
+# Dont have to be in the dictionary
+
+# Samples:
+# Nulls and spaces or 1 letter
+# output: True [permutations : "return input"]
+
+#Input : Tact Coa
+#Output : True (permutations: "taco cat", "atco cta", ect..)
+
+
+#Brute force                                            
+# Check ( exceptions )
+#                                                  a         available (b,c,d)  
+#                                                  b         (c,d)
+#                                                  c         (d)
+#                                                  d         ()    store(abcd)
+#                                                           
+
+    
+
 #-----------------------------------------------------------------------------------
 # Attempt 1:
 
@@ -72,14 +104,29 @@ class PP():
         # add back the spaces to the corresponding spot
         
     
-    def allPermutations(str): #It should return the array of all the permutations
-        # Must do Backtracking to solve all permutations
+    def all_Permutations(nums): 
+        result = ""
         
-        # Store the information in a array: Allperm = []
-        # Call the palindromeCheck and add if True : PalPerm = []
+        #Base Case
+        if(len(nums) == 1):
+            return [nums.copy]
         
-
-        pass
+        for i in range(len(nums)):
+            n = nums.pop()
+            perms = allPermutations(nums)
+            
+            for perm in perms:
+                perm.append(n)
+            result.extend(perms)
+            nums.append(n)
+            
+        
+        return result
+            
+        
+        
+            
+            
     
     def palindromeCheck(str): 
         # Traverse the string with two pointer start and end until they meet in the same index
