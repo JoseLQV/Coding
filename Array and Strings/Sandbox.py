@@ -70,21 +70,28 @@ removeSpaces("Hello Wolrd")
             
 
 # Testing
-array = [1,2,3,4]
+# Attempt 4
+array = [1,2,3]
 def permutations(array):
-    result = [[]]
+    result = []
+    result.append(array)
+    print(f"{result} testings")
     rec(array, result)
     return result
 
 
 def rec(available, result):
     # Check base case:
-    if len(available) == 1:
+    if len(available) == 2:
         switched = switch(available)
         #return store the switched version on result
-        
+        result.append(switched)
+        return
+    
+    
     # traverse
     for n in available:
+        result.append(n)
         temp_pointer = n
         # add the pointer in result
         available.remove(n)
@@ -92,7 +99,7 @@ def rec(available, result):
         available.append(temp_pointer)
         
     
-    return result
+    return
 
 def switch(available):
     tempSwitch = available
@@ -103,3 +110,4 @@ def switch(available):
 
 
 
+print(permutations(array))
