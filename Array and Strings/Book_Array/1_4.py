@@ -80,33 +80,22 @@
 class PP():
     
     def PaliPerm(str):
-        #CHECK (Exceptions)
-        Result = []
-        if str == None:
-            return (f"{True} + (permutation: {Result})")
-        if str == ' ' :
-            Result.append(str)
-            return (f"{True} + (permutation: {Result})")
-        
-        # Solve the problem of the spaces for the permutations (Fixed Space)
-        
-        fix_spaces = []
-        for index , letter in enumerate(str):
-            if letter == ' ':
-                # Save the spaces of the string to hard code it in the result
-                fix_spaces.append(index)
-                # remove all the spaces from the string
-                
-                 
-        
-        
-        # Call the Function for allPermutations:
-        # add back the spaces to the corresponding spot
-        
         pass
         
     
-    
+    def permutations_of_string(str):
+        #base case 
+        if len(str) == 1:
+            return [str]
+        
+        result = []
+        
+        #Traversal
+        for s in str:
+            temp = [s]
+            copy = str
+
+            
     def all_permutations(nums):
         #base case
         if len(nums) == 1:
@@ -120,10 +109,8 @@ class PP():
             copy = nums.copy()
             copy.remove(n)
             perm = PP.all_permutations(copy)
-            #-----Confusion------
             for p in perm: 
                 result.append(temp + p)
-            #-------------------- 
                 
         return result
     
@@ -157,13 +144,30 @@ class PP():
         
         
             
-        
-        
-            
-            
-    
     def palindromeCheck(str): 
         # Traverse the string with two pointer start and end until they meet in the same index
-        # Return Boolean
-        pass
+        # Return boolean
+        
+        
+        if len(str) <= 1 : 
+            return True
+        
+        left = 0
+        right = len(str) -1
+        while(left < right):
+            if str[left] != str[right]:
+                return False
+            left += 1
+            right -= 1
+        
+        return True
+    
+            
+            
+            
+        
+                
+                
+        
+    
 
