@@ -103,25 +103,59 @@ class PP():
         # Call the Function for allPermutations:
         # add back the spaces to the corresponding spot
         
+        pass
+        
     
-    def all_Permutations(nums): 
-        result = ""
+    
+    def all_permutations(nums):
+        #base case
+        if len(nums) == 1:
+            return [nums]
         
-        #Base Case
-        if(len(nums) == 1):
-            return [nums.copy]
+        result = []
         
-        for i in range(len(nums)):
-            n = nums.pop()
-            perms = allPermutations(nums)
-            
-            for perm in perms:
-                perm.append(n)
-            result.extend(perms)
-            nums.append(n)
-            
-        
+        #traverse
+        for n in nums:
+            temp = [n]
+            copy = nums.copy()
+            copy.remove(n)
+            perm = PP.all_permutations(copy)
+            #-----Confusion------
+            for p in perm: 
+                result.append(temp + p)
+            #-------------------- 
+                
         return result
+    
+    
+    # Leetcode version:
+    # class Solution(object):
+    # def permute(self, nums):
+    #     """
+    #     :type nums: List[int]
+    #     :rtype: List[List[int]]
+    #     """
+    #     #base case
+    #     if len(nums) == 1:
+    #         return [nums]
+        
+    #     result = []
+        
+        
+    #     #traverse
+    #     for n in nums:
+    #         temp = [n]
+    #         copy = list(nums)
+    #         copy.remove(n)
+    #         perm = self.permute(copy)
+    #         #-----Confusion------
+    #         for p in perm: 
+    #             result.append(temp + p)
+    #         #-------------------- 
+                
+    #     return result
+        
+        
             
         
         

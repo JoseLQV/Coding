@@ -44,7 +44,7 @@ def removeSpaces(str):
             pass
 
 
-removeSpaces("Hello Wolrd")
+# removeSpaces("Hello Wolrd")
 
 
 # # Chat GPT:
@@ -69,7 +69,7 @@ removeSpaces("Hello Wolrd")
 # print(permutations_array)
             
 
-# Testing
+# Permutations:
 # Attempt 4
 array = [1,2,3]
 def permutations(array):
@@ -110,4 +110,33 @@ def switch(available):
 
 
 
-print(permutations(array))
+# print(permutations(array))
+
+
+
+# Permutations attepmt 5:
+a = [1,2,3,4]
+
+def permute(nums):
+    #base case
+    if len(nums) == 1:
+        return [nums]
+    
+    result = []
+    
+    
+    #traverse
+    for n in nums:
+        temp = [n]
+        copy = nums.copy()
+        copy.remove(n)
+        perm =permute(copy)
+        #-----Confusion------
+        for p in perm: 
+            result.append(temp + p)
+        #-------------------- 
+            
+    return result
+
+
+print(permute(a))
