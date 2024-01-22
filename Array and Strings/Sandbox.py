@@ -1,6 +1,10 @@
 #   Information of Array and Strings
 print("Info of Arrays and Strings: ")
 
+stri = " man , follow: something"
+str1 = stri.replace(" ","", -1)
+print(str1)
+
 # # Hash Maps / Dictionaries
 # def hash():
 #     t = 8
@@ -18,6 +22,7 @@ print("Info of Arrays and Strings: ")
 #             map[n] = index
             
 #     return
+
   
 
         
