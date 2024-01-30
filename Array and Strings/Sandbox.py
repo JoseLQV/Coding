@@ -142,3 +142,18 @@ print(str1)
 
 
 # print(permute(a))
+
+
+
+
+
+# Python Practice
+def payment():
+    hours = int(input("hours: "))
+    rate = float(input("rate : $"))
+    payment = hours*rate
+    print(f"payment is: ${payment}")
+    
+payment()
+
+
