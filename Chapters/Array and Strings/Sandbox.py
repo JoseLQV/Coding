@@ -1,9 +1,11 @@
 #   Information of Array and Strings
-print("Info of Arrays and Strings: ")
+# print("Info of Arrays and Strings: ")
 
-stri = " man , follow: something"
-str1 = stri.replace(" ","", -1)
-print(str1)
+# stri = " man , follow: something"
+# str1 = stri.replace(" ","", -1)
+# print(str1)
+
+print("hello"   "1245")
 
 # # Hash Maps / Dictionaries
 # def hash():
@@ -145,15 +147,80 @@ print(str1)
 
 
 
-
-
 # Python Practice
-def payment():
-    hours = int(input("hours: "))
-    rate = float(input("rate : $"))
-    payment = hours*rate
-    print(f"payment is: ${payment}")
+# def payment():
+#     hours = int(input("hours: "))
+#     rate = float(input("rate : $"))
+#     payment = hours*rate
+#     print(f"payment is: ${payment}")
     
-payment()
+# payment()
 
 
+# input  is in inches
+# returns miles, feet, inches
+
+# 1 mile = 5280 ft
+# 1 ft = 12 in
+
+
+# inches_per_foot = 12
+# feet_per_mile =  5280
+# distance_inches =   float(input("Enter distance inches: "))
+
+# miles = distance_inches // (inches_per_foot * feet_per_mile)
+# remaining_inches = distance_inches % (inches_per_foot * feet_per_mile)
+# feet = remaining_inches // inches_per_foot
+# inches = remaining_inches % inches_per_foot
+
+# print(f"miles: {miles},feet: {feet},inches: {inches}")
+
+
+
+# def inches_to_miles_feet_inches(distance_inches):
+#     # Constants
+#     INCHES_IN_A_FOOT = 12
+#     FEET_IN_A_MILE = 5280
+
+#     # Calculate miles, feet, and remaining inches
+#     miles = distance_inches // (INCHES_IN_A_FOOT * FEET_IN_A_MILE)
+#     remaining_inches = distance_inches % (INCHES_IN_A_FOOT * FEET_IN_A_MILE)
+#     feet = remaining_inches // INCHES_IN_A_FOOT
+#     inches = remaining_inches % INCHES_IN_A_FOOT
+
+#     return miles, feet, inches
+
+# # Get input from the user
+# distance_inches = float(input("Enter distance in inches: "))
+
+# # # Calculate and display the result
+# # miles, feet, inches = inches_to_miles_feet_inches(distance_inches)
+# # print(f"{distance_inches} inches is equal to {miles} miles, {feet} feet, and {inches} inches.")
+
+# v=float(input("price? $"))
+# c=input("color? ")
+# if v<=25:
+#   if c=="red":
+#     print("buy")
+#   elif c=="blue":
+#     print("buy")
+#   elif 5<v<15:
+#     if (c=="white"):
+#         print("buy")
+#   elif v<=5:
+#     print("buy") 
+# else:
+#   print("no buy")
+
+
+
+# amount = 13.54
+
+# dollar = 13.54 // 1       = $13
+# amount = amount - 13    (13.54 - 13) = .54
+# quarters = .54 // .25   -> 2
+#amount = amount - .25*quarters ->    .54 - (.25*2)
+
+
+lst = []
+print(lst)
