@@ -1,53 +1,42 @@
-def quickSort(arr):
-    
-    # Def sort
-    def sort(left_index,right_index):
+def quickSelect(arr, k):
+    # Def divide
+    def divide(left, right):
         # Base Case
-        if left_index >= right_index:
-            return 
+        if left >= right:
+            return arr[left]
         
-        # Call Partition 
-        part = partition(left_index,right_index)
+        # Call Pivoting
+        piv = pivoting(left, right)
         
-        # Left Right Call
-        sort(left_index , part-1)
-        sort(part+1 , right_index)
+        # Left Right 
+        if piv == k: 
+            return arr[piv]
+        elif piv < k:
+            return divide(piv+1, right)
+        else:
+            return divide(left, piv-1)
     
-    
-    # Def partition
-    def partition(left_index,right_index):
+    # Def pivoting
+    def pivoting(left, right):
         # Choose Pivot
-        pivot =  arr[right_index]     
+        pivot = arr[right]
+        swap_index = left
         
-         # Traverse swap
-        for curr_index in range(left_index, right_index ):
-            if arr[curr_index] < pivot :
-                
-                arr[left_index], arr[curr_index] = arr[curr_index] , arr[left_index]
-                left_index += 1
-        
-        
-        # Swap Left Right
-        arr[left_index] , arr[right_index] = arr[right_index] , arr[left_index] 
-        
-        # Return Left
-        return left_index
-        
-        
-    
-    # Call sort
-    sort(0,len(arr)- 1)
-    return arr
-        
+        # Traverse
+        for curr in  range(left, right):
+            # swap
+            if arr[curr] < pivot:
+                arr[curr], arr[left] = arr[left], arr[curr]
+                swap_index += 1
             
+        # Last Swap
+        arr[swap_index] , arr[curr] = arr[curr], arr[swap_index]
+        
+        return swap_index
+    
+    return divide(0,len(arr)- 1)
+    
 
-print(quickSort([4, 2, 6, 1, 5, 3]))
+print(quickSelect([4, 2, 6, 1, 5, 3], 2))
 # Output: [1, 2, 3, 4, 5, 6]
-      
-            
-                
-                
-                
-        
-    
-   
+
