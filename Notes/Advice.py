@@ -49,5 +49,10 @@ Keep a left and right range starting with -infinity and also +infinity and trave
 
 """
 
+""" 
+105: Construct Binary Tree from preorder and inorder.
+
+Preorder gives the root and in order gives the left an right placement and repeat.
+"""
 
 
