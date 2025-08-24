@@ -17,3 +17,15 @@ right side wins
 
 All done in recursion 
 """
+
+""" 
+2043 Simple Bank System
+
+program: 
+Transfer, WIthdraw, Deposit
+
+The trick was create a def called valid(account_num) to make sure the number
+for the accounts where correct and a lot of self.variables
+
+
+"""
